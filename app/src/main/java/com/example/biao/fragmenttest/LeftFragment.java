@@ -19,7 +19,6 @@ public class LeftFragment extends Fragment {
     private List<Mes> list;
     private RecyclerviewAdapter adapter;
     private RecyclerView left_recyclerview;
-    private RightFragment rightFragment;
 
 
     @Nullable
@@ -34,16 +33,16 @@ public class LeftFragment extends Fragment {
         left_recyclerview = view.findViewById(R.id.left_recyclerview);
         left_recyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
         left_recyclerview.setAdapter(adapter);
-        rightFragment = new RightFragment();
 
         adapter.setOnClickItemListener(new OnClickItemListener() {
             @Override
             public void onClickItem(int position) {
                 Toast.makeText(getActivity(), "你点击了" + position, Toast.LENGTH_SHORT).show();
                 if (getActivity().findViewById(R.id.right_layout) != null) {
-//                    rightFragment.setRightText(position);
+
                 } else {
-                    Toast.makeText(getActivity(), "错误。。。", Toast.LENGTH_SHORT).show();
+                    MesParticularsActivity.actionStart(getActivity(), list.get(position).getTitle(),
+                            list.get(position).getContent());
                 }
             }
         });

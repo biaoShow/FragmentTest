@@ -4,20 +4,20 @@
     android:layout_height="match_parent">
 
 
-    <android.support.v4.view.ViewPager
+   <!-- <android.support.v4.view.ViewPager
         android:id="@+id/myviewpager"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         >
 
-    </android.support.v4.view.ViewPager>
-    <!--<fragment
+    </android.support.v4.view.ViewPager>-->
+    <fragment
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:name="com.example.biao.fragmenttest.LeftFragment"
-        android:id="@+id/left_fragment" />-->
+        android:id="@+id/left_fragment" />
 
     <FrameLayout
         android:id="@+id/right_layout"
